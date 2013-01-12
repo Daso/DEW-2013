@@ -1,4 +1,5 @@
 Valentine::Application.routes.draw do
+  root :to => "gifts#index"
   resources :gifts
 
   resources :users
