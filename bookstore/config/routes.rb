@@ -5,7 +5,11 @@ Bookstore::Application.routes.draw do
 
   resources :authors
 
-  resources :users
+  resources :users do
+    member do
+      get "add_book"
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

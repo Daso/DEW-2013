@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
+  def add_book
+    @user = User.find(params[:id])
+  end
+
   def index
     @users = User.all
 
