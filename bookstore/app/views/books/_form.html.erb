@@ -1,0 +1,16 @@
+<%= simple_form_for(@book) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <%= f.input :title %>
+  </div>
+  <div class="field">
+    <%= f.association :author%>
+
+
+
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
