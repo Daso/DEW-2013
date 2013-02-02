@@ -1,8 +1,15 @@
 Valentine::Application.routes.draw do
   root :to => "gifts#index"
-  resources :gifts
+  resources :gifts do
+    member do
+      get "find"
+    end
+  end
 
   resources :users
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

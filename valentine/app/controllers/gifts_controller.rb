@@ -1,6 +1,11 @@
 class GiftsController < ApplicationController
   # GET /gifts
   # GET /gifts.json
+
+  def find
+    @gift = Gift.find
+  end
+
   def index
     @gifts = Gift.all
 
